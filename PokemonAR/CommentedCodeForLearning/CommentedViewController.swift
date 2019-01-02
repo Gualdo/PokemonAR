@@ -2,18 +2,17 @@
 //  ViewController.swift
 //  PokemonAR
 //
-//  Created by De La Cruz, Eduardo on 02/01/2019.
-//  Copyright © 2019 De La Cruz, Eduardo. All rights reserved.
+//  Created by De La Cruz, Eduardo on 31/12/2018.
+//  Copyright © 2018 De La Cruz, Eduardo. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 import ARKit
-import GameplayKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var sceneView: ARSKView!
+class CommentedViewController: UIViewController {
+    
+    @IBOutlet var sceneView: ARSKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +34,9 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-        
+        let configuration = ARWorldTrackingConfiguration() // 6 grados de libertad, 3 grados para rotacion y 3 para traslacion o movimiento
+        // Basico: ARSessionConfiguration() -> 3 grados de libertad para rotar
+
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -49,14 +49,16 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: ARSKViewDelegate {
+extension CommentedViewController: ARSKViewDelegate {
     
     // MARK: - ARSKViewDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
-        let random = GKRandomSource.sharedRandom()
-        let pokemonId = (random.nextInt(upperBound: 4) + 1)
-        return SKSpriteNode(imageNamed: "pokemon\(pokemonId)")
+        // Create and configure a node for the anchor added to the view's session.
+        let labelNode = SKLabelNode(text: "👾")
+        labelNode.horizontalAlignmentMode = .center
+        labelNode.verticalAlignmentMode = .center
+        return labelNode;
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

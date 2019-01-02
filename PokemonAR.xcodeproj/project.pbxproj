@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		453EB5E321DA762E00313543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5E221DA762E00313543 /* AppDelegate.swift */; };
 		453EB5E521DA762E00313543 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 453EB5E421DA762E00313543 /* Scene.sks */; };
-		453EB5E721DA762E00313543 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5E621DA762E00313543 /* Scene.swift */; };
-		453EB5E921DA762E00313543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5E821DA762E00313543 /* ViewController.swift */; };
+		453EB5E721DA762E00313543 /* CommentedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5E621DA762E00313543 /* CommentedScene.swift */; };
+		453EB5E921DA762E00313543 /* CommentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5E821DA762E00313543 /* CommentedViewController.swift */; };
 		453EB5EC21DA762E00313543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453EB5EA21DA762E00313543 /* Main.storyboard */; };
 		453EB5EE21DA762F00313543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453EB5ED21DA762F00313543 /* Assets.xcassets */; };
 		453EB5F121DA762F00313543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453EB5EF21DA762F00313543 /* LaunchScreen.storyboard */; };
 		453EB5FC21DA763000313543 /* PokemonARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB5FB21DA763000313543 /* PokemonARTests.swift */; };
 		453EB60721DA763000313543 /* PokemonARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB60621DA763000313543 /* PokemonARUITests.swift */; };
+		45A3A40421DCDE7800F0A4C5 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3A40321DCDE7800F0A4C5 /* Scene.swift */; };
+		45A3A40721DCDF6800F0A4C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3A40621DCDF6800F0A4C5 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,8 @@
 		453EB5DF21DA762E00313543 /* PokemonAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453EB5E221DA762E00313543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453EB5E421DA762E00313543 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		453EB5E621DA762E00313543 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		453EB5E821DA762E00313543 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		453EB5E621DA762E00313543 /* CommentedScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentedScene.swift; sourceTree = "<group>"; };
+		453EB5E821DA762E00313543 /* CommentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentedViewController.swift; sourceTree = "<group>"; };
 		453EB5EB21DA762E00313543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453EB5ED21DA762F00313543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453EB5F021DA762F00313543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		453EB60221DA763000313543 /* PokemonARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		453EB60621DA763000313543 /* PokemonARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonARUITests.swift; sourceTree = "<group>"; };
 		453EB60821DA763000313543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A3A40321DCDE7800F0A4C5 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		45A3A40621DCDF6800F0A4C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,9 @@
 			children = (
 				453EB5E221DA762E00313543 /* AppDelegate.swift */,
 				453EB5E421DA762E00313543 /* Scene.sks */,
-				453EB5E621DA762E00313543 /* Scene.swift */,
-				453EB5E821DA762E00313543 /* ViewController.swift */,
+				45A3A40321DCDE7800F0A4C5 /* Scene.swift */,
+				45A3A40621DCDF6800F0A4C5 /* ViewController.swift */,
+				45A3A40521DCDF2F00F0A4C5 /* CommentedCodeForLearning */,
 				453EB5EA21DA762E00313543 /* Main.storyboard */,
 				453EB5ED21DA762F00313543 /* Assets.xcassets */,
 				453EB5EF21DA762F00313543 /* LaunchScreen.storyboard */,
@@ -129,6 +134,15 @@
 				453EB60821DA763000313543 /* Info.plist */,
 			);
 			path = PokemonARUITests;
+			sourceTree = "<group>";
+		};
+		45A3A40521DCDF2F00F0A4C5 /* CommentedCodeForLearning */ = {
+			isa = PBXGroup;
+			children = (
+				453EB5E621DA762E00313543 /* CommentedScene.swift */,
+				453EB5E821DA762E00313543 /* CommentedViewController.swift */,
+			);
+			path = CommentedCodeForLearning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453EB5E921DA762E00313543 /* ViewController.swift in Sources */,
-				453EB5E721DA762E00313543 /* Scene.swift in Sources */,
+				45A3A40721DCDF6800F0A4C5 /* ViewController.swift in Sources */,
+				45A3A40421DCDE7800F0A4C5 /* Scene.swift in Sources */,
+				453EB5E921DA762E00313543 /* CommentedViewController.swift in Sources */,
+				453EB5E721DA762E00313543 /* CommentedScene.swift in Sources */,
 				453EB5E321DA762E00313543 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
