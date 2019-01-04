@@ -18,6 +18,7 @@
 		453EB60721DA763000313543 /* PokemonARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453EB60621DA763000313543 /* PokemonARUITests.swift */; };
 		45A3A40421DCDE7800F0A4C5 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3A40321DCDE7800F0A4C5 /* Scene.swift */; };
 		45A3A40721DCDF6800F0A4C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3A40621DCDF6800F0A4C5 /* ViewController.swift */; };
+		45ACF53521DF66A5006D4935 /* QuickDeath.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45ACF53421DF66A5006D4935 /* QuickDeath.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		453EB60821DA763000313543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45A3A40321DCDE7800F0A4C5 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		45A3A40621DCDF6800F0A4C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45ACF53421DF66A5006D4935 /* QuickDeath.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = QuickDeath.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +107,13 @@
 		453EB5E121DA762E00313543 /* PokemonAR */ = {
 			isa = PBXGroup;
 			children = (
+				45ACF53221DF6677006D4935 /* Resourses */,
 				453EB5E221DA762E00313543 /* AppDelegate.swift */,
 				453EB5E421DA762E00313543 /* Scene.sks */,
 				45A3A40321DCDE7800F0A4C5 /* Scene.swift */,
 				45A3A40621DCDF6800F0A4C5 /* ViewController.swift */,
 				45A3A40521DCDF2F00F0A4C5 /* CommentedCodeForLearning */,
 				453EB5EA21DA762E00313543 /* Main.storyboard */,
-				453EB5ED21DA762F00313543 /* Assets.xcassets */,
 				453EB5EF21DA762F00313543 /* LaunchScreen.storyboard */,
 				453EB5F221DA762F00313543 /* Info.plist */,
 			);
@@ -143,6 +145,23 @@
 				453EB5E821DA762E00313543 /* CommentedViewController.swift */,
 			);
 			path = CommentedCodeForLearning;
+			sourceTree = "<group>";
+		};
+		45ACF53221DF6677006D4935 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				45ACF53321DF668C006D4935 /* Audio */,
+				453EB5ED21DA762F00313543 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		45ACF53321DF668C006D4935 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				45ACF53421DF66A5006D4935 /* QuickDeath.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45ACF53521DF66A5006D4935 /* QuickDeath.mp3 in Resources */,
 				453EB5E521DA762E00313543 /* Scene.sks in Resources */,
 				453EB5F121DA762F00313543 /* LaunchScreen.storyboard in Resources */,
 				453EB5EE21DA762F00313543 /* Assets.xcassets in Resources */,

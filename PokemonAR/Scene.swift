@@ -21,6 +21,7 @@ class Scene: SKScene {
         }
     }
     let startTime = Date()
+    let deathSound = SKAction.playSoundFileNamed("QuickDeath", waitForCompletion: false)
     
     override func didMove(to view: SKView) {
         // Configuracion del HUD (Heads Up Display)
@@ -59,7 +60,7 @@ class Scene: SKScene {
             let scaleOut = SKAction.scale(to: 2, duration: 0.4)
             let fadeOut = SKAction.fadeOut(withDuration: 0.4)
             let remove = SKAction.removeFromParent()
-            let groupedAction = SKAction.group([scaleOut, fadeOut])
+            let groupedAction = SKAction.group([scaleOut, fadeOut, deathSound])
             let sequenceAction = SKAction.sequence([groupedAction, remove])
             sprite.run(sequenceAction)
         }
@@ -67,6 +68,10 @@ class Scene: SKScene {
         // Actualizaremos que hay un pokemon menos con la variable targetCount
         
         targetCount -= 1
+        
+        if targetsCreated == 25 && targetCount == 0 {
+            gameOver()
+        }
     }
     
     fileprivate func createTarget() {
@@ -113,5 +118,33 @@ class Scene: SKScene {
         // 8.- Añadir esa ancla a la escena
         
         sceneView.session.add(anchor: anchor)
+    }
+    
+    fileprivate func gameOver() {
+        // Ocultar la remainingLabel
+        
+        remainingLabel.removeFromParent()
+        
+        // Crear una nueva imagen con la foto de game over
+        
+        let gameOver = SKSpriteNode(imageNamed: "gameover")
+        addChild(gameOver)
+        
+        // Calcular cuanto tiempo le ha llevado al usuario cazar a todos los pokemon
+        
+        let timeTaken = Date().timeIntervalSince(startTime)
+        
+        // Mostrar ese tiempo que le ha llevado en pantalla en una etiqueta nueva
+        
+        let timeTakenLabel = SKLabelNode(text: "Te ha llevado: \(Int(timeTaken))")
+        timeTakenLabel.fontSize = 40
+        timeTakenLabel.color = .white
+        guard let center = view?.frame.midY else {
+            timeTakenLabel.position = CGPoint(x: 0, y: 0)
+            addChild(timeTakenLabel)
+            return
+        }
+        timeTakenLabel.position = CGPoint(x: 0, y: center + 50)
+        addChild(timeTakenLabel)
     }
 }
